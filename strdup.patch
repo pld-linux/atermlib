@@ -1,0 +1,46 @@
+remove conflicting definition
+
+--- aterm-2.5/aterm/afun.c~	2007-03-01 19:24:13.000000000 +0200
++++ aterm-2.5/aterm/afun.c	2014-11-01 15:41:18.082012965 +0200
+@@ -56,7 +56,7 @@
+ /*{{{  function declarations */
+ 
+ #if !(defined __USE_SVID || defined __USE_BSD || defined __USE_XOPEN_EXTENDED || defined __APPLE__ || defined _MSC_VER)
+-extern char *strdup(const char *s);
++//extern char *strdup(const char *s);
+ #endif
+ 
+ /*}}}  */
+--- aterm-2.5/aterm/make.c~	2007-03-01 19:24:13.000000000 +0200
++++ aterm-2.5/aterm/make.c	2014-11-01 15:41:35.456142206 +0200
+@@ -47,7 +47,7 @@
+ /*{{{  function declarations */
+ 
+ #if !(defined __USE_SVID || defined __USE_BSD || defined __USE_XOPEN_EXTENDED || defined __APPLE__ || defined _MSC_VER)
+-extern char *strdup(const char *s);
++//extern char *strdup(const char *s);
+ #endif
+ 
+ static ATerm makePlaceholder(ATermPlaceholder pat);
+--- aterm-2.5/aterm/tafio.c~	2007-03-01 19:24:13.000000000 +0200
++++ aterm-2.5/aterm/tafio.c	2014-11-01 15:41:42.296455577 +0200
+@@ -47,7 +47,7 @@
+ /*{{{  function declarations */
+ 
+ #if !(defined __USE_SVID || defined __USE_BSD || defined __USE_XOPEN_EXTENDED || defined __APPLE__ || defined _MSC_VER)
+-extern char *strdup(const char *s);
++//extern char *strdup(const char *s);
+ #endif
+ 
+ /*}}}  */
+--- aterm-2.5/aterm/aterm.c~	2007-03-01 19:24:13.000000000 +0200
++++ aterm-2.5/aterm/aterm.c	2014-11-01 15:41:49.553454714 +0200
+@@ -94,7 +94,7 @@
+ /*{{{  function declarations */
+ 
+ #if !(defined __USE_SVID || defined __USE_BSD || defined __USE_XOPEN_EXTENDED || defined __APPLE__ || defined _MSC_VER)
+-extern char *strdup(const char *s);
++//extern char *strdup(const char *s);
+ #endif
+ 
+ static ATerm    fparse_term(int *c, FILE * f);
