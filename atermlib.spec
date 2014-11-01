@@ -10,7 +10,10 @@ Patch0:		https://svn.nixos.org/repos/nix/nixpkgs/trunk/pkgs/development/librarie
 # Patch0-md5:	0c7e50b3686a079959e7c978af9444db
 Patch1:		strdup.patch
 URL:		http://www.cwi.nl/htbin/sen1/twiki/bin/view/SEN1/ATermLibrary
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%undefine	__cxx
 
 %description
 ATerm (short for Annotated Term) is an abstract data type designed for
