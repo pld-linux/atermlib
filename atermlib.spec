@@ -5,13 +5,11 @@ Release:	1
 License:	LGPL
 Group:		Development
 Source0:	http://ftp.strategoxt.org/pub/stratego/StrategoXT/strategoxt-0.17/aterm-%{version}.tar.gz
-# Source0-md5:	60218283e58c56365c9117690f36c25d
+# Source0-md5:	33ddcb1a229baf406ad1f603eb1d5995
 Patch0:		https://svn.nixos.org/repos/nix/nixpkgs/trunk/pkgs/development/libraries/aterm/max-long.patch
 # Patch0-md5:	0c7e50b3686a079959e7c978af9444db
 Patch1:		strdup.patch
 URL:		http://www.cwi.nl/htbin/sen1/twiki/bin/view/SEN1/ATermLibrary
-# x86_64 build segfaults
-ExcludeArch:	%{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -64,7 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/atdiff
-%attr(755,root,root) %{_bindir}/atreverse
 %attr(755,root,root) %{_bindir}/atrmannos
 %attr(755,root,root) %{_bindir}/atsum
 %attr(755,root,root) %{_bindir}/baf2taf
