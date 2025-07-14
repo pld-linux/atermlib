@@ -42,8 +42,8 @@ ApiGen to generate typed interfaces to the same ATerms.
 
 %prep
 %setup -q -n aterm-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 CFLAGS="%{rpmcflags} -D__NO_CTYPE"
